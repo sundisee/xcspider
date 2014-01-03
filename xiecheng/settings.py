@@ -10,6 +10,6 @@ BOT_NAME = 'xiecheng'
 
 SPIDER_MODULES = ['xiecheng.spiders']
 NEWSPIDER_MODULE = 'xiecheng.spiders'
-
+LOG_FILE = '/home/ubuntu/logs/xcspider.log'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'xiecheng (+http://www.yourdomain.com)'
