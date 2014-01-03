@@ -313,7 +313,7 @@ class province_spider(BaseSpider):
             if poi_percentage_tmp:
                 poi_percentage = poi_percentage_tmp[0]
 #                ###print poi_percentage
-            conn=MySQLdb.connect(host='localhost',user='root',passwd='',db='mafengwo',port=3306,charset='utf8')
+            conn=MySQLdb.connect(host='54.201.192.244',user='qyer',passwd='qyer',db='mafengwo',port=3306,charset='utf8')
             cur=conn.cursor()
             sql = 'insert into xiecheng_poi(prov_url,prov_name,is_province,city_url,city_name,city_rank,poi_name,poi_url,\
             poi_tags,poi_tel,poi_addr,poi_lat,poi_lng,poi_desc,poi_percentage,poi_open_time,poi_play_time,poi_ticket,poi_rank)\
@@ -384,7 +384,7 @@ class province_spider(BaseSpider):
             if poi_percentage_tmp:
                 poi_percentage = poi_percentage_tmp[0]
                 ###print poi_percentage
-            conn=MySQLdb.connect(host='localhost',user='root',passwd='',db='mafengwo',port=3306,charset='utf8')
+            conn=MySQLdb.connect(host='54.201.192.244',user='qyer',passwd='qyer',db='mafengwo',port=3306,charset='utf8')
             cur=conn.cursor()
             sql = 'insert into xiecheng_poi(prov_url,prov_name,is_province,city_url,city_name,city_rank,poi_name,poi_url,\
             poi_tags,poi_tel,poi_addr,poi_lat,poi_lng,poi_desc,poi_percentage,poi_open_time,poi_rank)\
@@ -449,7 +449,7 @@ class province_spider(BaseSpider):
             if poi_percentage_tmp:
                 poi_percentage = poi_percentage_tmp[0]
                 ##print poi_percentage
-            conn=MySQLdb.connect(host='localhost',user='root',passwd='',db='mafengwo',port=3306,charset='utf8')
+            conn=MySQLdb.connect(host='54.201.192.244',user='qyer',passwd='qyer',db='mafengwo',port=3306,charset='utf8')
             cur=conn.cursor()
             sql = 'insert into xiecheng_poi(prov_url,prov_name,is_province,city_url,city_name,city_rank,poi_name,poi_url,\
             poi_tags,poi_tel,poi_addr,poi_lat,poi_lng,poi_desc,poi_percentage,poi_rank)\
@@ -525,7 +525,7 @@ class province_spider(BaseSpider):
             if poi_percentage_tmp:
                 poi_percentage = poi_percentage_tmp[0]
                 #print poi_percentage
-            conn=MySQLdb.connect(host='localhost',user='root',passwd='',db='mafengwo',port=3306,charset='utf8')
+            conn=MySQLdb.connect(host='54.201.192.244',user='qyer',passwd='qyer',db='mafengwo',port=3306,charset='utf8')
             cur=conn.cursor()
             sql = 'insert into xiecheng_poi(prov_url,prov_name,is_province,city_url,city_name,city_rank,poi_name,poi_url,\
             star_rank,poi_tags,poi_play_time,poi_tel,poi_open_time,poi_ticket,poi_addr,poi_lat,poi_lng,poi_desc,poi_traffic,poi_percentage,poi_rank)\
