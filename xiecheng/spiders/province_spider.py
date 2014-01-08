@@ -4,7 +4,7 @@ from scrapy.http import Request
 from scrapy.selector import Selector
 from scrapy.spider import BaseSpider
 import re
-conn=MySQLdb.connect(host='54.254.228.203',user='root',passwd='root',db='mafengwo',port=3306,charset='utf8')
+conn=MySQLdb.connect(host='54.254.228.203',user='luna',passwd='luna',db='mafengwo',port=3306,charset='utf8')
 cur=conn.cursor()
 class province_spider(BaseSpider):
     name = "province"
