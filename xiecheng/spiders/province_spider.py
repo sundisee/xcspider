@@ -5,6 +5,7 @@ from scrapy.selector import Selector
 from scrapy.spider import BaseSpider
 import re
 conn=MySQLdb.connect(host='54.254.228.203',user='luna',passwd='luna',db='mafengwo',port=3306,charset='utf8')
+#conn=MySQLdb.connect(host='localhost',user='root',passwd='',db='mafengwo',port=3306,charset='utf8')
 cur=conn.cursor()
 class province_spider(BaseSpider):
     name = "province"
@@ -105,11 +106,8 @@ class province_spider(BaseSpider):
             rank =(poi_page-1)*10+1
             for site in sites:
                 star_rank = ''
-                poi_name = site.xpath('dl/dt/a/text()').extract()[0]
-                poi_url = site.xpath('dl/dt/a/@href').extract()[0]
-                star_rank_tmp = site.xpath('dl/dt/text()').extract()
-                if star_rank_tmp:
-                    star_rank = star_rank_tmp[0]
+                poi_name = site.xpath('div[@class="rdetailbox"]/dl/dt/a/text()').extract()[0]
+                poi_url = site.xpath('div[@class="rdetailbox"]/dl/dt/a/@href').extract()[0]
                 poi_rank = rank
                 ####print poi_name,poi_url,poi_rank
                 #get poi_content
@@ -149,8 +147,8 @@ class province_spider(BaseSpider):
                 ###print max_page,response.url
             rank =(poi_page-1)*10+1
             for site in sites:
-                poi_name = site.xpath('dl/dt/a/text()').extract()[0]
-                poi_url = site.xpath('dl/dt/a/@href').extract()[0]
+                poi_name = site.xpath('div[@class="rdetailbox"]/dl/dt/a/text()').extract()[0]
+                poi_url = site.xpath('div[@class="rdetailbox"]/dl/dt/a/@href').extract()[0]
                 poi_rank = rank
                 ###print poi_name,poi_url,poi_rank
                 #get poi_content
@@ -186,8 +184,8 @@ class province_spider(BaseSpider):
                 ####print max_page,response.url
             rank =(poi_page-1)*10+1
             for site in sites:
-                poi_name = site.xpath('dl/dt/a/text()').extract()[0]
-                poi_url = site.xpath('dl/dt/a/@href').extract()[0]
+                poi_name = site.xpath('div[@class="rdetailbox"]/dl/dt/a/text()').extract()[0]
+                poi_url = site.xpath('div[@class="rdetailbox"]/dl/dt/a/@href').extract()[0]
                 poi_rank = rank
                 ####print poi_name,poi_url,poi_rank
                 #get poi_content
@@ -228,12 +226,9 @@ class province_spider(BaseSpider):
             rank =(poi_page-1)*10+1
             
             for site in sites:
-                start_rank = ''
-                poi_name = site.xpath('dl/dt/a/text()').extract()[0]
-                poi_url = site.xpath('dl/dt/a/@href').extract()[0]
-                star_rank_tmp = site.xpath('dl/dt/text()').extract()
-                if star_rank_tmp:
-                    star_rank = star_rank_tmp[0]
+                star_rank = ''
+                poi_name = site.xpath('div[@class="rdetailbox"]/dl/dt/a/text()').extract()[0]
+                poi_url = site.xpath('div[@class="rdetailbox"]/dl/dt/a/@href').extract()[0]
                 poi_rank = rank
                 ####print poi_name,poi_url,poi_rank
                 #get poi_content
